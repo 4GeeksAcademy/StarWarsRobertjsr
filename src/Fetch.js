@@ -33,7 +33,7 @@ export const getPeopleID = async (id) => {
     const resp = await fetch(`${URB}/people/${id}`)
     if (!resp.ok) throw new Error('Error en la toma de datos del fetch peoples')
     const data = await resp.json()
-    return data
+    return data.result.properties
 } 
 
 // GET ID PLANETS
@@ -42,7 +42,7 @@ export const getPlanetID = async (id) => {
     const resp = await fetch(`${URB}/planets/${id}`)
      if (!resp.ok) throw new Error('Error en la toma de datos del fetch planets')
     const data = await resp.json()
-    return data
+    return data.result.properties
 } 
 
 // GET ID VEHICLES
@@ -51,5 +51,5 @@ export const getVehicleID = async (id) => {
     const resp = await fetch(`${URB}/vehicles/${id}`)
      if (!resp.ok) throw new Error('Error en la toma de datos del fetch vehicles')
     const data = await resp.json()
-    return data
+    return data.result.properties
 } 

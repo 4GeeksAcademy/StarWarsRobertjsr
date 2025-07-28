@@ -2,6 +2,7 @@ import example from '../assets/img/babyYoda.jpg'
 import { useEffect } from 'react'
 import { getVehicles } from "../Fetch";
 import useGlobalReducer from '../hooks/useGlobalReducer'
+import { Link } from "react-router-dom";
 
 export const Vehiclecard = () => {
 
@@ -46,6 +47,9 @@ export const Vehiclecard = () => {
                                     >
                                         <i className="bi bi-star"></i>
                                     </button>
+                                    <Link to={`/DetailsVehicle/${vehicle.uid}`}>
+                                        <button className='btn like'><i className="bi bi-info-circle"></i></button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

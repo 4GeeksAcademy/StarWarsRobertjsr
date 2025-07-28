@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import example from '../assets/img/babyYoda.jpg'
 import { getPeoples } from "../Fetch";
 import useGlobalReducer from '../hooks/useGlobalReducer'
+import { Link } from "react-router-dom";
 
 
 export const Peoplecard = () => {
@@ -47,6 +48,9 @@ export const Peoplecard = () => {
                                     >
                                         <i className="bi bi-star"></i>
                                     </button>
+                                    <Link to={`/DetailsPeople/${character.uid}`}>
+                                        <button className='btn like'><i className="bi bi-info-circle"></i></button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

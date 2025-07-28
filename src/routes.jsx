@@ -19,9 +19,9 @@ export const router = createBrowserRouter(
         <Route path="/Peoples" element={<Peoplecard />} />
         <Route path="/Planets" element={<Planetcard />} />
         <Route path="/Vehicles" element={<Vehiclecard />} />
-        {/* <Route path= "/DetailsPeople/:id" element={<DetailsPeople />} />
+        <Route path= "/DetailsPeople/:id" element={<DetailsPeople />} />
         <Route path= "/DetailsPlanet/:id" element={<DetailsPlanet />} />
-        <Route path= "/DetailsVehicle/:id" element={<DetailsVehicle />} /> */}
+        <Route path= "/DetailsVehicle/:id" element={<DetailsVehicle />} />
       </Route>
   )
 );
